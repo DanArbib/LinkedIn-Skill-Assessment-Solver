@@ -18,11 +18,19 @@ This Python script assists in passing LinkedIn Skill Assessment quizzes by autom
 - Displays the captured and cropped image for verification.
 - Performs OCR on the cropped image to recognize text.
 - Trims the recognized text to extract questions.
-- Generates answers to LinkedIn questions using the GPT-3 model.
+- Generates answers to LinkedIn questions using GPT.
 
 
-Usage
-Run the script: python main.py.
+To run this project, follow these steps:
+1. Clone this GitHub repository to your local machine using the following command:
+   https://github.com/DanArbib/LinkedIn-Skill-Assessment-Solver.git
+2. Create a `.env` file in the project directory and add your OpenAI API key as follows:
+   OPENAI_API_KEY=your_api_key_here
+3. Use `pip` to install the project dependencies from the `requirements.txt` file:
+   pip install -r requirements.txt
+4. Execute the `main.py` script to start the project:
+   python main.py
+
 Follow the on-screen instructions to specify crop percentages for each side to capture the quiz area.
 During the quiz, press 'Enter' to read each question.
 The script will capture the question, perform OCR, trim the text, and generate answers if configured.
