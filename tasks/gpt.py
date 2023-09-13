@@ -11,9 +11,9 @@ def generate_answer(question):
     prompt = f'I am taking a quiz and need to select the correct answer from the options provided. Question: [{question}]. Choose the correct answer.'
 
     response = openai.Completion.create(model="text-davinci-003", prompt=prompt.strip(), temperature=0,
-                                              max_tokens=1000)
-    res = response['choices'][0]['text'].replace('!', '').replace('"', '', ).strip()
-    return res
+                                              max_tokens=400)
+    answer = response['choices'][0]['text'].strip()
+    return answer
 
 
 
